@@ -1,0 +1,1 @@
+SELECT department, SUM(salary) FROM Employee GROUP BY(department);
