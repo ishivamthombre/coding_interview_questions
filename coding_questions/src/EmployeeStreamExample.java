@@ -2,9 +2,8 @@ import java.util.*;
 import java.util.stream.*;
 
 class Employee {
-  private final int id;
   private final String name;
-  private final double salary;
+  private final String department;
 
   // Constructor
   public Employee(int id, String name, double salary) {
