@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.stream.*;
 
-class Employee {
+/*class Employee {
   private final String name;
   private final String department;
 
@@ -51,4 +51,4 @@ public class EmployeeStreamExample {
     System.out.println("\nEmployees sorted by name (descending):");
     employees.stream().sorted(Comparator.comparing(Employee::getName).reversed()).forEach(System.out::println);
   }
-}
+}*/

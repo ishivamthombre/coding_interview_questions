@@ -18,23 +18,3 @@ public class FibonacciRecursive {
     }
   }
 }
-
-
-@Retry(name = "service", method = "fallbackmethod")
-someservice(){
-
-  RateLimiter count ++;
-
-  fallbackMethod
-}
-
-
-@CircuitBreker(name = "service", method = "fallbackmethod")
-someservice(){
-
-
-
-  fallbackMethod(){
-    "due to some its failing"
-  }
-}
