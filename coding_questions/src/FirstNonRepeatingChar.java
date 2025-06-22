@@ -9,12 +9,8 @@ public class FirstNonRepeatingChar {
     String input = "swiss";
 
     Optional<Character> result =
-        input.chars()
-            .mapToObj(c -> (char) c)
-            .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
-            .entrySet().stream().filter(characterLongEntry -> characterLongEntry.getValue() == 1)
-            .map(Map.Entry::getKey)
-            .findFirst();
+        input.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+            .entrySet().stream().filter(characterLongEntry -> characterLongEntry.getValue() == 1).map(Map.Entry::getKey).findFirst();
 
     result.ifPresent(character -> System.out.println("First Non-repeating Character : " + character));
 

@@ -2,7 +2,7 @@ package synechron;
 
 import java.util.StringJoiner;
 
-class Employee {
+public class Employee {
   private final String name;
   private final String department;
 

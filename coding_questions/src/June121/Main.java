@@ -17,9 +17,9 @@ public class Main {
 
     employees.add(new Employee(3, "Alice", 350000));
 
-    List<Employee> uniqueEmployee= employees.stream()
-        .collect(Collectors.toMap(Employee::getName, e-> e, (e1, e2) -> e1.getSalary() > e2.getSalary() ? e1 : e2)).values()
-        .stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).collect(Collectors.toList());
+    List<Employee> uniqueEmployee =
+        employees.stream().collect(Collectors.toMap(Employee::getName, e -> e, (e1, e2) -> e1.getSalary() > e2.getSalary() ? e1 : e2))
+            .values().stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).collect(Collectors.toList());
 
     uniqueEmployee.forEach(System.out::println);
   }
